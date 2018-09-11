@@ -16,5 +16,19 @@ from keras.callbacks import ReduceLROnPlateau
 sns.set(style='white', context='notebook', palette='deep')
 
 
-train = pd.read_csv('emnist-byclass-train.csv')
-test = pd.read_csv('emnist-byclass-test.csv')
+train = pd.read_csv('E:\\datasets\\emnist\\emnist-letters-train.csv')
+test = pd.read_csv('E:\\datasets\\emnist\\emnist-letters-test.csv')
+train.info()
+print(train.head())
+Y_train = train['23']
+
+
+X_train = train.drop(labels = ["23"],axis = 1)
+
+del train
+
+g = sns.countplot(Y_train)
+
+plt.show()
+
+print(Y_train.value_counts())
