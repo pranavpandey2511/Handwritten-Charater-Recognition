@@ -41,12 +41,10 @@ cv2.setMouseCallback('image',draw_circle)
 
 while(1):
     cv2.imshow('image',img)
-    k = cv2.waitKey(0)
-        break
-
+    k = cv2.waitKey(0) #Waitkey
 cv2.destroyAllWindows()
 
-'''train = pd.read_csv('E:\\datasets\\emnist\\emnist-letters-train.csv')
+train = pd.read_csv('E:\\datasets\\emnist\\emnist-letters-train.csv')
 test = pd.read_csv('E:\\datasets\\emnist\\emnist-letters-test.csv')
 train.info()
 print(train.head())
@@ -61,4 +59,4 @@ g = sns.countplot(Y_train)
 
 plt.show()
 
-print(Y_train.value_counts())'''
+print(Y_train.value_counts())
